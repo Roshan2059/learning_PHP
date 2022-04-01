@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <label>enter a number</label>
+    <input type="text" id="n1"> <br>
+    <label>enter a second number</label>
+    <input type="text" id="n2"> <br>
+    <input type="button" value="addition" onclick="add()">
+    <script>
+        function add() {
+            var n1 = parseInt(document.getElementById("n1").value);
+            var n2 = parseInt(document.getElementById("n2").value);
+            var sum = n1 + n2;
+            alert(sum);
+        }
+    </script>
+
+    <!-- <form>
+        <label>name</label>
+        <input type="text" id="name"/> <br>
+        <label>address</label>
+        <input type="text" id="address"/> <br>
+        <label>phone no.</label>
+        <input type="text" id="phone"/> <br>
+        <input type="submit" name="submit" value="submit" onclick="show()"/>
+    </form>
+
+    <script>
+        function show() {
+            document.write(`Your name is ${document.getElementById("name").value}`); 
+            document.write(`Your address is ${document.getElementById("address").value}`); 
+            document.write(`Your name is ${document.getElementById("phone").value}`);
+        }
+    </script> -->
+
+    <!-- <script>
+        function checkOnline() {
+            alert("You are back online..");
+        }
+        function checkOffline() {
+            alert("Sorry, you are offline, check yor connection..");
+        }
+        window.addEventListener("online", checkOnline);
+        window.addEventListener("offline", checkOffline);
+    </script> -->
+
+</body>
+
+</html>

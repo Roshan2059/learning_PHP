@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <form action="">
+        <label>Your Age</label><br>
+        <input type="text" id="age"><br>
+        <input type="submit" value="answer" onclick="dipesh()">
+    </form>
+
+    <script>
+        function dipesh() {
+            let age = parseInt(document.getElementById('age').value);
+            if (age < 13) {
+                alert("You are a child.");
+            } else if(age >= 13 && age <= 19) {
+                alert("You are a teenager");
+            } else{
+                alert("You are a adult.");
+            }
+            // alert(`Your age is ${ageee}`);
+        }
+
+    </script>
+</body>
+
+</html>
