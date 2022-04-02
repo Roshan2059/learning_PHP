@@ -89,6 +89,9 @@ include 'connection.php';
             min-height: 30vh;
             width: 32%;
             margin-top: 1em;
+            position: relative;
+            padding-bottom: 1em;
+            
             /* clip-path: polygon(0% 0%, 100% 0%, 100% 90%, 0% 100%); */
         }
 
@@ -109,7 +112,7 @@ include 'connection.php';
         .box p{
             display: block;
             padding: 1em;
-            line-height: 5vh;
+            word-wrap: break-word;
         }
 
         .box a{
@@ -118,12 +121,18 @@ include 'connection.php';
             background-color: pink;
             text-decoration: none;
             margin: 1vh auto;
-            position: relative;
-            left: 67%;
+            line-height: 7vh;
         }
 
         .box a:hover{
             background-color: lightpink;
+        }
+
+        .edel{
+            position: absolute;
+            right: 5px;
+            bottom: 0;
+            /* margin-right: 10px; */
         }
     </style>
 </head>
@@ -159,7 +168,8 @@ include 'connection.php';
             echo "<div class='box'>";
             echo "<h1>".++$sn.". ".$row['Title']."</h1>"."<h3>".$row['DateTime']."</h3>";
             echo "<p>".$row['Description']."</p>";
-            echo "<a href='edit.php'>Edit</a>"." <a href='delete.php'>Delete</a>";
+            echo "<div class='edel'>"."<a href='edit.php'>Edit</a>"." <a href='delete.php'>Delete</a>";
+            echo "</div>";
             echo "</div>";
         }
         ?>
