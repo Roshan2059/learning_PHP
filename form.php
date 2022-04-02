@@ -20,6 +20,26 @@
         <input type="password" name="pass"><br>
         <button type="submit">Submit</button>
     </form>
+
+    <?php
+    include 'connection.php';
+    if($_SERVER['REQUEST_METHOD'] == 'POST'){
+        $name = $_POST['name'];
+        $email = $_POST['mail'];
+        $uname = $_POST['uname'];
+        $pw = $_POST['pass'];
+
+        $sql = "insert into cwh1 values('$name', '$email', '$uname', '$pw')";
+        $sql_exe = mysqli_query($con, $sql);
+
+        if($sql_exe){
+            echo('You are now our customer');
+        }
+        else{
+            echo('Oops! Account not created.Please try again later.');
+        }
+    }
+    ?>
 </body>
 
 </html>
